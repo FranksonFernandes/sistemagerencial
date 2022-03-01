@@ -142,7 +142,8 @@
                                                             data-bairro="<?php echo $bairro ?>"
                                                             data-endereco="<?php echo $endereco ?>">
                                                                 <i class="fas fa-user-edit"></i></button>
-                                                            <button type="button" class="btn btn-primary btn-sm" title="Ver completo"><i class="fas fa-search"></i></button>
+                                                                
+                                                            <a class="btn btn-primary btn-sm" href="frm_Ver_Editar_Cliente.php?id=<?php echo $id_cliente ?>" role="button"><i class="fas fa-search"></i></a>
 
                                                         </td>
 
