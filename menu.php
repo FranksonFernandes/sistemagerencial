@@ -265,6 +265,10 @@
                     <li>
                         <a href="lista_clientes.php">Lista Clientes</a>
                     </li>
+
+                    <li>
+                        <a href="lista_clientes_inativos.php">Clientes Inativos</a>
+                    </li>
                     
                 </ul>
             </li>

@@ -105,8 +105,8 @@
 
                                         <select class="form-control" name="sexo">
                                             <option></option>
-                                            <option>Homem</option>
-                                            <option>Mulher</option>
+                                            <option>Masculino</option>
+                                            <option>Feminino</option>
                                             <option>LGBTQIA+</option>
                                             <option>Não declarado</option>
                                         </select>

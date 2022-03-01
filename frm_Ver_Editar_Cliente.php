@@ -49,17 +49,7 @@ $id = $_GET['id'];
 
                             <div class="card-body">
 
-                                <?php
-
-                                if (isset($_GET['msg'])) { ?>
-
-                                    <div class="alert alert-success" role="alert">
-                                        Registro alterado com sucesso!
-                                    </div>
-
-                                <?php }
-
-                                ?>
+                                
 
                                 <?php
 
@@ -98,7 +88,7 @@ $id = $_GET['id'];
                                         
                                             <div class="col-md-2 mb-2">
                                                 <label>Código Interno</label>
-                                                <input type="text" class="form-control" value="<?php echo  $id_cliente?>" readonly name="id_cliente">
+                                                <input type="text" class="form-control"  value="<?php echo  $id_cliente?>" readonly name="id_cliente">
 
                                                 <label>Ativo</label>
 
@@ -110,6 +100,7 @@ $id = $_GET['id'];
                                             <select class="form-control" name="ativo">
                                                 <option><?php echo $ativo ?> </option>
                                                 <option>N</option>
+                                                <option>S</option>
                                             </select>
                                             
                                            </div>
@@ -164,8 +155,8 @@ $id = $_GET['id'];
 
                                             <select class="form-control" name="sexo">
                                                 <option><?php echo $sexo ?></option>
-                                                <option>Homem</option>
-                                                <option>Mulher</option>
+                                                <option>Masculino</option>
+                                                <option>Feminino</option>
                                                 <option>LGBTQIA+</option>
                                                 <option>Não declarado</option>
                                             </select>
@@ -212,7 +203,7 @@ $id = $_GET['id'];
 
                                         <div class="form-group">
                                             <label for="validationTextarea">Observações</label>
-                                            <textarea name="observacoes" class="form-control" id="validationTextarea" placeholder="Observações sobre o cliente"><?php echo $observacao ?></textarea>
+                                            <textarea name="observacao" class="form-control" id="validationTextarea" placeholder="Observações sobre o cliente"><?php echo $observacao ?></textarea>
 
                                         </div>
 

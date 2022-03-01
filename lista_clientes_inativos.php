@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 
 
-<!-- jquery para modal  
+<!-- jquery para modal --> 
 <script>
     $(function() {
 
@@ -9,34 +9,20 @@
             var button = $(event.relatedTarget)
             var recipientID = button.data('id_cliente')
             var recipientDescricao = button.data('descricao')
-            var recipientFantasia = button.data('fantasia')
-            var recipienteCelular = button.data('celular')
-            var recipienteTelefone = button.data('telefone')
-            var recipienteEmail = button.data('email')
-            var recipienteCidade = button.data('cidade')
-            var recipienteBairro = button.data('bairro')
-            var recipienteEndereco = button.data('endereco')
-            var recipienteObservacao = button.data('observacao')
-
+            var recipientAtivo = button.data('ativo')
+            
             var modal = $(this)
-            modal.find('.modal-title').text('Edição Rápida: ')
+            modal.find('.modal-title').text('Ativar Cliente: ')
             modal.find('#recipient-id_cliente').val(recipientID)
             modal.find('#recipient-descricao').val(recipientDescricao)
-            modal.find('#recipient-fantasia').val(recipientFantasia)
-            modal.find('#recipient-celular').val(recipienteCelular)
-            modal.find('#recipient-telefone').val(recipienteTelefone)
-            modal.find('#recipient-email').val(recipienteEmail)
-            modal.find('#recipient-cidade').val(recipienteCidade)
-            modal.find('#recipient-bairro').val(recipienteBairro)
-            modal.find('#recipient-endereco').val(recipienteEndereco)
-            modal.find('#recipient-observacao').val(recipienteObservacao)
-
+            modal.find('#recipient-ativo').val(recipientAtivo)
+            
 
 
         });
 
     });
-</script>-->
+</script>
 
 <body class="adminbody">
 
@@ -58,7 +44,7 @@
                                 <h1 class="main-title float-left">Dashboard</h1>
                                 <ol class="breadcrumb float-right">
                                     <li class="breadcrumb-item">Home</li>
-                                    <li class="breadcrumb-item active">Lista de Clientes</li>
+                                    <li class="breadcrumb-item active">Lista de Clientes Inativos</li>
                                 </ol>
                                 <div class="clearfix"></div>
                             </div>
@@ -88,7 +74,7 @@
                                 if (isset($_GET['msg'])) { ?>
 
                                     <div class="alert alert-success" role="alert">
-                                        Registro alterado com sucesso!
+                                        Registro ativado com sucesso!
                                     </div>
 
                                 <?php }
@@ -117,7 +103,7 @@
 
                                                 include 'conexao.php';
 
-                                                $sql = "SELECT * FROM CLIENTES WHERE ATIVO='S'";
+                                                $sql = "SELECT * FROM CLIENTES WHERE ATIVO IN ('N','')";
                                                 $busca = mysqli_query($conexao, $sql);
 
                                                 while ($array = mysqli_fetch_array($busca)) {
@@ -143,27 +129,20 @@
                                                         <td> <?php echo $email ?> </td>
                                                         <td> <?php echo $cidade ?> </td>
                                                         <td>
-                                                            <!-- Modal botão alteração rápida  
+                                                            <!-- Modal botão alteração rápida --> 
                                                             <button type="button" class="btn btn-warning btn-sm" title="Editar" data-toggle="modal" data-target="#exampleModal"  
                                                             data-id_cliente="<?php echo $id_cliente ?>" 
                                                             data-descricao="<?php echo $nome ?>" 
-                                                            data-fantasia="<?php echo $fantasia ?>" 
-                                                            data-celular="<?php echo $celular ?>" 
-                                                            data-telefone="<?php echo $telefone ?>" 
-                                                            data-email="<?php echo $email ?>" 
-                                                            data-cidade="<?php echo $cidade ?>" 
-                                                            data-observacao="<?php echo $observacao ?>" 
-                                                            data-bairro="<?php echo $bairro ?>"
-                                                            data-endereco="<?php echo $endereco ?>">
-                                                                <i class="fas fa-user-edit"></i></button> -->
+                                                            data-ativo="<?php echo $ativo ?>" 
+                                                           >
+                                                                <i class="fas fa-user-edit"></i></button> 
                                                                 
-                                                            <a class="btn btn-primary btn-sm" title="Editar" href="frm_Ver_Editar_Cliente.php?id=<?php echo $id_cliente ?>" role="button"><i class="fas fa-user-edit"></i></a>
                                                               
                                                         </td>
 
                                                     </tr>
 
-                                                    <!-- Modal Edit 
+                                                    <!-- Modal Edit -->
                                                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                         <div class="modal-dialog  modal-dialog-scrollable">
                                                             <div class="modal-content">
@@ -174,7 +153,7 @@
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    <form action="salvar_edicao_cliente.php" method="post">
+                                                                    <form action="ativar_cliente.php" method="post">
                                                                     <div class="form group">
                                                                             
                                                                         
@@ -185,67 +164,25 @@
 
                                                                         <div class="form-group">
                                                                             <label for="message-text" class="col-form-label">Descrição</label>
-                                                                            <input type="text" class="form-control" id="recipient-descricao" name="" maxlength="200">
+                                                                            <input type="text" class="form-control" id="recipient-descricao" readonly name="nome" >
                                                                         </div>
 
                                                                         <div class="form-group">
-                                                                            <label for="message-text" class="col-form-label">Fantasia/Apelido</label>
-                                                                            <input type="text" class="form-control" id="recipient-fantasia" name="fantasia" maxlength="200">
+                                                                            <label for="message-text" class="col-form-label">Gostaria de ativar novamente o cliente ?</label>
                                                                         </div>
-
-                                                                        <div class="form control col-md-6 mb-6">
-                                                                            <label for="message-text" class="col-form-label">Celular</label>
-                                                                            <input type="text" class="form-control celular" id="recipient-celular" name="celular" maxlength="100">
-                                                                        </div>
-
-                                                                        
-                                                                        <div class="form control col-md-6 mb-6">
-                                                                            <label for="message-text" class="col-form-label">Telefone</label>
-                                                                            <input type="text" class="form-control telefone" id="recipient-telefone" name="telefone">
-                                                                        </div>
-
-                                                                        
-
-                                                                        <div class="form-group">
-                                                                            <label for="message-text" class="col-form-label">E-mail</label>
-                                                                            <input type="text" class="form-control" id="recipient-email" name="email" maxlength="100">
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="message-text" class="col-form-label">Cidade</label>
-                                                                            <input type="text" class="form-control" id="recipient-cidade" name="cidade">
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="message-text" class="col-form-label">Bairro</label>
-                                                                            <input type="text" class="form-control" id="recipient-bairro" name="bairro">
-                                                                        </div>
-
-                                                                        <div class="form-group">
-                                                                            <label for="message-text" class="col-form-label">Endereço</label>
-                                                                            <input type="text" class="form-control" id="recipient-endereco" name="endereco">
-                                                                        </div>
-
-                                                                        
-
-                                                                        <div class="form-group">
-                                                                            <label for="message-text" class="col-form-label">Observações</label>
-                                                                            <textarea class="form-control" id="recipient-observacao" name="observacao"></textarea>
-                                                                        </div>
-
                                                                     
 
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                                    <button type="submit" class="btn btn-primary">Salvar</button>
+                                                                    <button type="submit" class="btn btn-primary">Sim</button>
                                                                 </div>
 
                                                                 </form>
 
                                                             </div>
                                                         </div>
-                                                    </div> -->
+                                                    </div> 
                                                     <!-- Fim Modal Edit -->
 
                                                     

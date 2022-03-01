@@ -1,0 +1,1 @@
+edicao_rapida_cliente
