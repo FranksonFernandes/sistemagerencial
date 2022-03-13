@@ -31,31 +31,51 @@
                         <br>
                     <div class="form-group">
                         <label for="inputPassword" class="form-group">Senha</label>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
+                        <input type="password" id="password" class="form-control" placeholder="Senha" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputPassword" class="form-group">Confirmar Senha</label>
+                        <input type="password" id="confirm_password" class="form-control"  placeholder="Confirmar senha" required="">
                     </div>
 
 
                     <br>
-                    <button class="btn btn-primary btn-block" type="submit">Entrar</button>
+                    <button type="submit" class="btn btn-primary btn-block">Confirmar</button>
 
                 </form>
 
                 <br>
 
-                 <center><a href="frm_cadastrar_usuario.php">Criar uma conta?</a> </center>
+                <center> 
+                    <a href="index.php">Logar ?</a>
+                </center>
 
-
-
-
-            </div>
-            <div class="col-md-3"></div>
+                </div>
+            <div class="col-md-4"></div>
         </div>
 
     </div>
 
-
-
-
 </body>
 
 </html>
+
+<!-- Validando se a senha informada é igual na confirmação -->
+
+
+<script type="text/javascript">
+var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Senhas diferentes!");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
