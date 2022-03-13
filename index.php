@@ -1,86 +1,61 @@
-<?php include 'header.php'; ?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<body class="adminbody">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
-    <div id="main">
+    <title>Autenticação</title>
+</head>
 
-        <?php include 'topbar.php';?>
-        <?php include 'menu.php';?>
 
-        <div class="content-page">
 
-            <!-- Start content -->
-            <div class="content">
+<!-- Custom styles for this template -->
 
-                <div class="container-fluid">
+<body>
 
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="breadcrumb-holder">
-                                <h1 class="main-title float-left">Dashboard</h1>
-                                <ol class="breadcrumb float-right">
-                                    <li class="breadcrumb-item">Home</li>
-                                    <li class="breadcrumb-item active">Dashboard</li>
-                                </ol>
-                                <div class="clearfix"></div>
-                            </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" style="margin-top: 150px">
 
-                          
-
-                        </div>
+                <form>
+                    <!-- Colocar imagem <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">-->
+                    <div class="form-group">
+                        <label for="inputEmail" class="form-group">E-Mail</label>
+                        <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required="" autofocus="">
                     </div>
-                    <!-- end row -->
-
-
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
-                            <div class="card-box noradius noborder bg-danger">
-                                <i class="far fa-user float-right text-white"></i>
-                                <h6 class="text-white text-uppercase m-b-20">Users</h6>
-                                <h1 class="m-b-20 text-white counter">487</h1>
-                                <span class="text-white">12 Today</span>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
-                            <div class="card-box noradius noborder bg-purple">
-                                <i class="fas fa-download float-right text-white"></i>
-                                <h6 class="text-white text-uppercase m-b-20">Downloads</h6>
-                                <h1 class="m-b-20 text-white counter">290</h1>
-                                <span class="text-white">12 Today</span>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
-                            <div class="card-box noradius noborder bg-warning">
-                                <i class="fas fa-shopping-cart float-right text-white"></i>
-                                <h6 class="text-white text-uppercase m-b-20">Orders</h6>
-                                <h1 class="m-b-20 text-white counter">320</h1>
-                                <span class="text-white">25 Today</span>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
-                            <div class="card-box noradius noborder bg-info">
-                                <i class="far fa-envelope float-right text-white"></i>
-                                <h6 class="text-white text-uppercase m-b-20">Messages</h6>
-                                <h1 class="m-b-20 text-white counter">58</h1>
-                                <span class="text-white">5 New</span>
-                            </div>
-                        </div>
+                        <br>
+                    <div class="form-group">
+                        <label for="inputPassword" class="form-group">Senha</label>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
                     </div>
-                    <!-- end row -->
 
 
-                </div>
-                <!-- END container-fluid -->
+                    <br>
+                    <button class="btn btn-primary btn-block" type="submit">Entrar</button>
+
+                </form>
+
+                <br>
+
+                <center> <a href="cadastrar_usuario.php">Criar uma conta?</a> </center>
+
+
+
 
             </div>
-            <!-- END content -->
-
+            <div class="col-md-3"></div>
         </div>
-        <!-- END content-page -->
 
-        <?php include 'footer.php';?>
+    </div>
 
-       
+
+
+
+</body>
+
+</html>
