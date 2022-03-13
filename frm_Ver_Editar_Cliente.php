@@ -177,7 +177,7 @@ $id = $_GET['id'];
 
                                         <div class="col-md-3 mb-3">
                                             <label for="exampleInputPassword1">IE/RG</label>
-                                            <input name="IE_RG" type="text" value="<?php echo $ie_rg ?>" class="form-control" id="IE_RG" placeholder="Informe o RG ou IE" maxlength="20" autocomplete="off">
+                                            <input name="ie_rg" type="text" value="<?php echo $ie_rg ?>" class="form-control" id="IE_RG" placeholder="Informe o RG ou IE" maxlength="20" autocomplete="off">
                                         </div>
 
 

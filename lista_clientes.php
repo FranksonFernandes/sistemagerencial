@@ -117,7 +117,7 @@
 
                                                 include 'conexao.php';
 
-                                                $sql = "SELECT * FROM CLIENTES WHERE ATIVO='S'";
+                                                $sql = "SELECT * FROM CLIENTES WHERE ATIVO ='S'";
                                                 $busca = mysqli_query($conexao, $sql);
 
                                                 while ($array = mysqli_fetch_array($busca)) {
