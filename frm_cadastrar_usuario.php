@@ -11,7 +11,25 @@
     <title>Autenticação</title>
 </head>
 
+    <style>
+        body{
+            background-color:  #073a79;
+        }
 
+        form{
+            border: solid 1px lightgray;
+		    border-radius: 20px;
+            padding: 20px;
+           
+            
+        }
+
+        label{
+            color: lightgoldenrodyellow;
+        }
+
+        
+    </style>
 
 <!-- Custom styles for this template -->
 

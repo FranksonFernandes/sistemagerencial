@@ -20,6 +20,8 @@ $senhaEncriptada = sha1($senha); //Encriptando a senha passada
 //Verifica se as senhas e se o usuário está ativo 
 if($senhaEncriptada == $senhaBanco && $ativo =='S')
 {
+    session_start();
+    $_SESSION['emailx'] = $email;
     header('Location: ./painel/index.php');
 }
 

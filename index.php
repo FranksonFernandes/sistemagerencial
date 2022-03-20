@@ -9,6 +9,22 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
+    <style>
+        body{
+            background-color:  #073a79;
+        }
+
+        form{
+            border: solid 1px lightgray;
+		    border-radius: 20px;
+            padding: 20px;
+           
+            
+        }
+
+        
+    </style>
+
     <title>Autenticação</title>
 </head>
 
@@ -24,7 +40,7 @@
             <div class="col-md-4" style="margin-top: 150px">
 
                 <form action="index1.php" method="POST">
-
+                
                 <!-- Retorno de validação de senha para alertas  -->
                     <?php
 
@@ -56,20 +72,21 @@
 
                     <!-- Colocar imagem <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">-->
                     <div class="form-group">
-                        <label for="inputEmail" class="form-group">E-Mail</label>
+                        <label for="inputEmail" class="form-group" style="color: lightgoldenrodyellow;">E-Mail</label>
                         <input name="email" type="email" id="inputEmail" class="form-control" placeholder="E-mail" required="" autofocus="">
                     </div>
                     <br>
                     <div class="form-group">
-                        <label for="inputPassword" class="form-group">Senha</label>
+                        <label for="inputPassword" class="form-group" style="color: lightgoldenrodyellow;">Senha</label>
                         <input name="senha" type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
                     </div>
 
 
                     <br>
                     <button class="btn btn-primary btn-block" type="submit">Entrar</button>
-
+                    
                 </form>
+
 
                 <br>
 

@@ -1,8 +1,25 @@
+<?php
+
+session_start();
+
+echo $emailHeader = $_SESSION['emailx']; 
+
+// Verificando se usuario esta logado (sessão e-mail):
+if(!isset($_SESSION['emailx'])){
+    header('Location: ../index.php');
+}
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Gestão Comercial - GED</title>
+    <title>Gestão Comercial - GED </title>
     <meta name="description" content="Dashboard | Nura Admin">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
