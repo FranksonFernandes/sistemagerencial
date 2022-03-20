@@ -1,5 +1,5 @@
 <?php include 'header.php';
-include 'conexao.php';
+include './conexao/conexao.php';
 
 $id = $_GET['id'];
 

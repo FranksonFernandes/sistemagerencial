@@ -57,13 +57,7 @@
                                 ?>
 
                                 <form action="inserir_clientes.php" method="post">
-                                    <div class="form-check">
-
-                                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="opcao1" aria-label="..." checked>
-                                        <label class="form-check-label" for="gridRadios2">
-                                            Ativo
-                                        </label>
-                                    </div>
+                                    
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Nome/Razão Social</label>
                                         <input type="text" name="nome" class="form-control" placeholder="Informe o nome do Cliente" maxlength="200" required autocomplete="off">

@@ -101,7 +101,7 @@
                                             <tbody>
                                                 <?php
 
-                                                include 'conexao.php';
+                                                include './conexao/conexao.php';
 
                                                 $sql = "SELECT * FROM CLIENTES WHERE ATIVO IN ('N','')";
                                                 $busca = mysqli_query($conexao, $sql);

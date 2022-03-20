@@ -115,9 +115,9 @@
                                             <tbody>
                                                 <?php
 
-                                                include 'conexao.php';
+                                                include './conexao/conexao.php';
 
-                                                $sql = "SELECT * FROM CLIENTES WHERE ATIVO ='S'";
+                                                $sql = "SELECT * FROM CLIENTES WHERE ATIVO ='S' ORDER BY ID_CLIENTE";
                                                 $busca = mysqli_query($conexao, $sql);
 
                                                 while ($array = mysqli_fetch_array($busca)) {

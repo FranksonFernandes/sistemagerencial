@@ -2,7 +2,7 @@
 
 session_start();
 
-echo $emailHeader = $_SESSION['emailx']; 
+$emailHeader = $_SESSION['emailx']; 
 
 // Verificando se usuario esta logado (sessão e-mail):
 if(!isset($_SESSION['emailx'])){
