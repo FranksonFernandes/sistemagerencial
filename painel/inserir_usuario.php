@@ -11,7 +11,7 @@ $sql = "INSERT INTO `usuario`( `NOME`,`EMAIL`,`SENHA`) VALUES ('$nome','$email',
 
 $insert = mysqli_query($conexao, $sql);
 
-
+header('Location: ../index.php?msg=1');
 
 
 

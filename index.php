@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,16 +23,46 @@
             <div class="col-md-4"></div>
             <div class="col-md-4" style="margin-top: 150px">
 
-                <form>
+                <form action="index1.php" method="POST">
+
+                <!-- Retorno de validação de senha para alertas  -->
+                    <?php
+
+        
+                    if (isset($_GET['msg'])) {
+                        $msg = $_GET['msg'];
+                        if ($msg == 1)
+                         { ?>
+                            <div class="alert alert-warning" role="alert">
+                                Solicitação feita! Por favor aguarde o administrador aprovar.
+                            </div>
+
+                    <?php } elseif ($msg == 2) { ?>
+
+                        
+                        <div class="alert alert-danger" role="alert">
+                                Senha incorreta, ou E-mail não cadastrado.
+                        </div>
+
+                    <?php } else { ?>
+                        
+                        <div class="alert alert-danger" role="alert">
+                               E-mail inativo, favor procurar administrador do sistema!
+                        </div>
+
+                                
+                       <?php } } ?>
+
+
                     <!-- Colocar imagem <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">-->
                     <div class="form-group">
                         <label for="inputEmail" class="form-group">E-Mail</label>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required="" autofocus="">
+                        <input name="email" type="email" id="inputEmail" class="form-control" placeholder="E-mail" required="" autofocus="">
                     </div>
-                        <br>
+                    <br>
                     <div class="form-group">
                         <label for="inputPassword" class="form-group">Senha</label>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
+                        <input name="senha" type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
                     </div>
 
 
@@ -42,7 +73,7 @@
 
                 <br>
 
-                 <center><a href="frm_cadastrar_usuario.php">Criar uma conta?</a> </center>
+                <center><a href="frm_cadastrar_usuario.php">Criar uma conta?</a> </center>
 
 
 
