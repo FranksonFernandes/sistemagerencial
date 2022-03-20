@@ -22,33 +22,37 @@
             <div class="col-md-4"></div>
             <div class="col-md-4" style="margin-top: 150px">
 
-                <form>
+                <form action="./painel/inserir_usuario.php" method="post">
                     <!-- Colocar imagem <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">-->
                     <div class="form-group">
                         <label for="inputEmail" class="form-group">E-Mail</label>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required="" autofocus="">
+                        <input name="email" type="email" id="inputEmail" class="form-control" placeholder="E-mail" required="" autofocus="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail" class="form-group">Nome</label>
+                        <input name="nome" type="text" id="inputEmail" class="form-control" placeholder="Nome" required="" autofocus="">
                     </div>
                         <br>
                     <div class="form-group">
                         <label for="inputPassword" class="form-group">Senha</label>
-                        <input type="password" id="password" class="form-control" placeholder="Senha" required="">
+                        <input name="senha" type="password" id="password" class="form-control" placeholder="Senha" required="">
                     </div>
 
                     <div class="form-group">
                         <label for="inputPassword" class="form-group">Confirmar Senha</label>
-                        <input type="password" id="confirm_password" class="form-control"  placeholder="Confirmar senha" required="">
+                        <input name="confirmar_senha" type="password" id="confirm_password" class="form-control"  placeholder="Confirmar senha" required="">
                     </div>
 
 
                     <br>
-                    <button type="submit" class="btn btn-primary btn-block">Confirmar</button>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar Solicitação</button>
 
                 </form>
 
                 <br>
 
                 <center> 
-                    <a href="index.php">Logar ?</a>
+                    <a href="index.php">Voltar</a>
                 </center>
 
                 </div>
