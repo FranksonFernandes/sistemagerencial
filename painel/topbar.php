@@ -28,12 +28,12 @@
                 <!-- item-->
                 <div class="dropdown-item noti-title">
                     <h5 class="text-overflow">
-                        <small>Hello, admin</small>
+                        <small>Olá</small>
                     </h5>
                 </div>
 
                 <!-- item-->
-                <a href="profile.html" class="dropdown-item notify-item">
+                <a href="perfil_usuario.php" class="dropdown-item notify-item">
                     <i class="fas fa-user"></i>
                     <span>Profile</span>
                 </a>

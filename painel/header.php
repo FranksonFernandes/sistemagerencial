@@ -1,15 +1,31 @@
 <?php
+include './conexao/conexao.php';
 
 session_start();
 
 $emailHeader = $_SESSION['emailx']; 
+
 
 // Verificando se usuario esta logado (sessão e-mail):
 if(!isset($_SESSION['emailx'])){
     header('Location: ../index.php');
 }
 
+else{
 
+
+
+$sql = "select * from USUARIO where EMAIL ='$emailHeader' ";
+$busca = mysqli_query($conexao, $sql);
+while ($array = mysqli_fetch_array($busca)) {
+    $id_usuario   = $array['ID_USUARIO'];
+    $nome_usuario = $array['NOME'];
+    $cadastro     = $array['DT_CADASTRO'];
+    $atualizado   = $array['DT_ALTERACAO'];
+    $telefone     = $array['TELEFONE'];
+    $celular      = $array['CELULAR'];
+}
+}
 
 
 ?>
